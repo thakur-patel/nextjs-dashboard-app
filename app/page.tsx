@@ -1,5 +1,5 @@
 import MozLogo from '@/app/ui/moz-logo';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIcon, ChartBarSquareIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { lusitana } from '@/app/ui/fonts'
 import Image from 'next/image';
@@ -22,12 +22,20 @@ export default function Page() {
             </a>
             
           </p>
-          <Link
-            href="/login"
-            className="flex items-center gap-5 self-start rounded-lg bg-blue-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-100 md:text-base"
-          >
-            <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link>
+          <div className='flex flex-row gap-12'>
+            <Link
+              href="/login"
+              className="flex items-center gap-5 self-start rounded-lg bg-blue-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-red-900 md:text-base"
+            >
+              <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
+            </Link>
+            <Link
+              href="/dashboard"
+              className="flex items-center gap-5 self-start rounded-lg bg-blue-100 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-red-900 md:text-base"
+            >
+              <span>Free Trial</span> <ChartBarSquareIcon className="w-5 md:w-6" />
+            </Link>
+          </div>
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
           {/* Add Hero Images Here */}
